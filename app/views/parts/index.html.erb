@@ -1,5 +1,16 @@
 <h1></h1>
-
+<div class="head-show">
+    <%= render part, :part => @head %>
+</div>
+<div class="torso-show">
+    <%= render part, :part => @torso %>
+</div>
+<div class="legs-show">
+    <%= render part, :part => @legs %>
+</div>
+<div class="feet-show">
+    <%= render part, :part => @feet %>
+</div>
 <br>
 
 <%= link_to 'New Part', new_part_path %>
