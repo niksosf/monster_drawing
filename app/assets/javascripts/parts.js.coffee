@@ -9,23 +9,44 @@ $(document).on 'click', '.save', (e) ->
   $('#part_img').val($('#simple_sketch')[0].toDataURL())
 
 ready = ->
+  set_canvas = (canvas) ->
+    ctx    = canvas[0].getContext('2d')
+    image = new Image()
+    image.src = canvas.data('uri')
+    ctx.drawImage(image, 0, 0)
+  
+
+  
+
+  ###################################
+  # app/views/parts/show.html.erb
+  ###################################
+  canvas = $('.show_part')
+  if canvas.length
+    set_canvas(canvas)
+
+
+
+
+
+
+
+
+  ###################################
   # app/views/parts/_form.html.erb partial
+  ###################################
   #  Setting up the Canvas
-  $('#simple_sketch').sketch();
+  sketch_canvas = $('#simple_sketch')
+  if sketch_canvas.length
+    set_canvas(sketch_canvas)
+    sketch_canvas.sketch() 
 
-  $(document).on 'mousedown', '.save', (e) ->
-    e.preventDefault()
-    $('#part_img').val($('#simple_sketch')[0].toDataURL())
-    console.log 'clicked on save'
+    $(document).on 'mousedown', '.save', (e) ->
+      e.preventDefault()
+      $('#part_img').val($('#simple_sketch')[0].toDataURL())
+      console.log 'clicked on save'
 
-  # app/views/parts/index.html.erb
-  console.log 'hello there'
-  console.log "canvas,", canvas = $('.show_part')
-  console.log "ctx", ctx    = canvas[0].getContext('2d')
-  image = new Image()
-  image.src = canvas.data('uri')
-  ctx.drawImage(image, 0, 0)
-
+  
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
