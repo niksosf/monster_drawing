@@ -4,7 +4,10 @@ class PartsController < ApplicationController
   # GET /parts
   # GET /parts.json
   def index
-    
+    @head = Part.head.sample
+    @torso = Part.torso.sample
+    @legs = Part.legs.sample
+    @feet = Part.feet.sample
   end
 
   # GET /parts/1
