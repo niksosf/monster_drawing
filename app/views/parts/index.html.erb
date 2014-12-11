@@ -9,16 +9,16 @@
         </div>
         <div id="figure">
           <div class="head-show">
-            <%= render @head, :part => @head %>
+            <%= render @head, :part => @head unless @head.nil? %>
           </div>
           <div class="torso-show">
-            <%= render @torso, :part => @torso %>
+            <%= render @torso, :part => @torso unless @torso.nil? %>
           </div>
           <div class="legs-show">
-            <%= render @legs, :part => @legs %>
+            <%= render @legs, :part => @legs unless @legs.nil? %>
           </div>
           <div class="feet-show">
-            <%= render @feet, :part => @feet %>
+            <%= render @feet, :part => @feet unless @feet.nil? %>
           </div>
         </div>
     </div>
