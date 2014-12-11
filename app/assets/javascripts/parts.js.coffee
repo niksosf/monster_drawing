@@ -14,12 +14,23 @@ ready = ->
     image = new Image()
     image.src = canvas.data('uri')
     ctx.drawImage(image, 0, 0)
+  
+
+  
+
   ###################################
-  # app/views/parts/index.html.erb
+  # app/views/parts/show.html.erb
   ###################################
   canvas = $('.show_part')
   if canvas.length
     set_canvas(canvas)
+
+
+
+
+
+
+
 
   ###################################
   # app/views/parts/_form.html.erb partial
