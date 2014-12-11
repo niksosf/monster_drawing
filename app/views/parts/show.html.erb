@@ -10,10 +10,5 @@
   <canvas class='show_part' width="800" height="300" style='border: 1px solid #000;' data-uri="<%= @part.img %>"></canvas>
 </p>
 
-<p>
-  <strong>Other parts:</strong>
-  <%= @part.other_parts %>
-</p>
-
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>
