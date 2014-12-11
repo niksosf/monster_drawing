@@ -14,7 +14,7 @@ class PartsController < ApplicationController
 
   # GET /parts/new
   def new
-    @part = Part.new
+    @part = Part.new name: [ "head", "torso", "legs", "feet" ].sample
   end
 
   # GET /parts/1/edit
