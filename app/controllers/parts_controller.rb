@@ -4,10 +4,14 @@ class PartsController < ApplicationController
   # GET /parts
   # GET /parts.json
   def index
-    @head = Part.head.sample
-    @torso = Part.torso.sample
-    @legs = Part.legs.sample
-    @feet = Part.feet.sample
+    if params[:id].present?
+      @just_finished_part = Part.find(params[:id])
+      instance_variable_set("@#{@just_finished_part.name}", @just_finished_part)
+    end
+    @head ||= Part.head.sample
+    @torso ||= Part.torso.sample
+    @legs ||= Part.legs.sample
+    @feet ||= Part.feet.sample
   end
 
   # GET /parts/1
