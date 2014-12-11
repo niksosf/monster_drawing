@@ -1,16 +1,25 @@
-<h1></h1>
-<div class="head-show">
-    <%= render @head, :part => @head %>
-</div>
-<div class="torso-show">
-    <%= render @torso, :part => @torso %>
-</div>
-<div class="legs-show">
-    <%= render @legs, :part => @legs %>
-</div>
-<div class="feet-show">
-    <%= render @feet, :part => @feet %>
-</div>
-<br>
+    <div class="show">
+        <div id="instructions">
+            <h3>Wow!</h3>
+            <p>Great! Now go draw another one! ;-)
+            <div>
+              <input type="submit"  class="button-primary" value="Start over">
+              <p><%= link_to 'New Part', new_part_path %></p>
+            </div>
+        </div>
+        <div id="figure">
+          <div class="head-show">
+            <%= render @head, :part => @head %>
+          </div>
+          <div class="torso-show">
+            <%= render @torso, :part => @torso %>
+          </div>
+          <div class="legs-show">
+            <%= render @legs, :part => @legs %>
+          </div>
+          <div class="feet-show">
+            <%= render @feet, :part => @feet %>
+          </div>
+        </div>
+    </div>
 
-<%= link_to 'New Part', new_part_path %>

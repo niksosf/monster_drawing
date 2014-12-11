@@ -10,12 +10,11 @@ $(document).on 'click', '.save', (e) ->
 
 ready = ->
   set_canvas = (canvas) ->
-    ctx    = canvas[0].getContext('2d')
-    image = new Image()
-    image.src = canvas.data('uri')
-    ctx.drawImage(image, 0, 0)
-  
-
+    for x in canvas
+      ctx       = x.getContext('2d')
+      image     = new Image()
+      image.src = $(x).data('uri')
+      ctx.drawImage(image, 0, 0)
   
 
   ###################################
@@ -24,13 +23,6 @@ ready = ->
   canvas = $('.show_part')
   if canvas.length
     set_canvas(canvas)
-
-
-
-
-
-
-
 
   ###################################
   # app/views/parts/_form.html.erb partial

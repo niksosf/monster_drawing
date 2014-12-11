@@ -9,13 +9,13 @@ body {
   border-right: 3px solid #036;
   border-left: 3px solid #036;
   display: inline-block;
-  background-color: black;
+  /*background-color: black;*/
 }
 .draw img {
   position: relative;
   height: 25%;
 }
-.show img {
+.show canvas {
   position: relative;
   height: 25.1%;
 }
