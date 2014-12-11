@@ -17,12 +17,10 @@
     <%= f.hidden_field :name %>
   </div>
   <h1>Draw: <%= @part.name %></h1>
-  <canvas id="simple_sketch" class='simple_sketch' width="800" height="300" style='border: 1px solid #000;'></canvas>
-  <div class="field">
-    <%= f.label :img %><br>
+  <canvas id="simple_sketch" class='simple_sketch' width="960" height="180" style='border: 1px solid #000;'></canvas>
+  <div class="field" style='display: none;'>
     <%= f.text_area :img %>
   </div>
-  <button class='save'>update</button>
   <div class="actions save">
     <%= f.submit %>
   </div>
