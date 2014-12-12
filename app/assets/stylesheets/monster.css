@@ -5,10 +5,7 @@ body {
   overflow-x: hidden;
 }
 #figure {
-  border-right: 3px solid #036;
-  border-left: 3px solid #036;
   display: inline-block;
-  /*background-color: black;*/
 }
 .draw img {
   position: relative;
