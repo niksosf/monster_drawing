@@ -7,6 +7,23 @@ body {
 #figure {
   display: inline-block;
 }
+.show #figure {
+  
+  position: absolute;
+  
+  width: 1150px;
+  left: 50%;
+  margin-left: -648px;
+
+  height: 880px;
+  top: 50%;
+  margin-top: -520px;
+  
+  background-image: url('/assets/paper.jpg');
+  padding-top: 145px;
+  padding-left: 185px;
+  
+}
 .draw img {
   position: relative;
   height: 25%;
@@ -14,6 +31,7 @@ body {
 .show canvas {
   position: relative;
   height: 25.1%;
+  border: none !important;
 }
 .selected {
   background-color: white;
