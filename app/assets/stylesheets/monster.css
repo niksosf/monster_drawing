@@ -19,7 +19,7 @@ body {
   top: 50%;
   margin-top: -520px;
   
-  background-image: url('/assets/paper.jpg');
+  background-image: url('https://trbl.io/static/paper.jpg');
   padding-top: 145px;
   padding-left: 185px;
   
